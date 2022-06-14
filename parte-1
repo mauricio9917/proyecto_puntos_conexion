@@ -1,0 +1,38 @@
+
+   
+print("--------------------------------------------------------------------")
+print("    Bienvenido al Sistema de Ubicación Para Zonas públicas WiFi     ")
+print("--------------------------------------------------------------------")
+
+# inicialización de variables
+nombreUsuario = 51631   
+contraseña = 13615   
+cap1 = 1*6+1+1-5
+cap2 = 6*1+1+1-5*1 
+cap3 = 1+1+1
+finDig = 631
+suma = 634
+
+# Condicionales hasta confirmar el inicio de sesión
+usuarioIngre = float(input("Digite su número de usuario: "))
+
+if usuarioIngre == nombreUsuario:
+    contraseñaIngre = float(input("Correcto. Ingrese su contraseña: "))
+    if contraseñaIngre == contraseña:
+        captcha = float(input(f"Correcto. Ingrese la suma de {finDig} + {cap1 or cap2 or cap3}: "))
+        if captcha == suma:
+            #inicio de sesión exitoso
+            print("ingreso exitoso")
+            print("Sesión iniciada")
+        else:
+            print("Error")
+            exit(0)
+    else:
+        print("Error")
+        exit(0)
+else:
+    print("Error")
+    exit(0)
+
+
+
